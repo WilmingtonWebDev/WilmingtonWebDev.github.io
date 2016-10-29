@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Pelican Output
+output
+
+# pid files
+*.pid
