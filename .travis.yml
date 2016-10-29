@@ -5,6 +5,8 @@ branches:
   only:
   - development
 install:
+# Upgrade pip so that we can use constraints
+- curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
 - pip install -r requirements.txt -c requirements.lock
 script:
 - make github
