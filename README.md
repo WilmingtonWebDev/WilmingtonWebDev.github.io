@@ -55,9 +55,17 @@ Modified: 2016-10-29
 About content goes here!
 ```
 
-## Updating the live site
+## Site auto update
 
-The following command will upload the build site to https://wilmingtonwebdev.github.io/
+When any changes pushed to `development` the site is compiled by travis and a static site pushed to the `master` branch which served on the live site at https://wilmingtonwebdev.github.io
+
+The automatic deployment is roughly described in the _Setting up Travis CI_ section  [here](http://cyrille.rossant.net/pelican-github/).
+Deployment credentials securely stored and used in the using the recommendations documented [here](https://docs.travis-ci.com/user/encrypting-files/#Automated-Encryption)
+
+
+## Manully Updating the live site
+
+The following command will manuall build and upload the static site to https://wilmingtonwebdev.github.io
 
 ```
 make github
