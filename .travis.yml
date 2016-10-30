@@ -22,6 +22,7 @@ install:
 script:
 # Need to pull latest master for push to work
 - git fetch origin master:master
-- make github
+- make publish # Generates new site
+- make github # Publish site to github
 after_script:
 - rm travis_wilwebdev_deploy
