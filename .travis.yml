@@ -1,12 +1,22 @@
 language: python
 python:
-  - "2.7"
+- '2.7'
 branches:
   only:
   - development
+before_install:
+- openssl aes-256-cbc -K $encrypted_3687d9297665_key -iv $encrypted_3687d9297665_iv
+  -in travis_wilwebdev_deploy.enc -out travis_wilwebdev_deploy -d
+- eval "$(ssh-agent -s)" # Start the ssh agent
+- chmod 600 travis_wilwebdev_deploy
+- ssh-add travis_wilwebdev_deploy # Add key to ssh-agent
+- git config user.email "automated@travis-ci.com"
+- git config user.name "Travis C.I."
 install:
 # Upgrade pip so that we can use constraints
 - curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
 - pip install -r requirements.txt -c requirements.lock
 script:
 - make github
+after_script:
+- rm travis_wilwebdev_deploy
