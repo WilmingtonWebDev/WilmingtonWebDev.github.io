@@ -20,9 +20,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+STATIC_PATHS = ['images']
+
 # Blogroll
 LINKS = (
     ('TheMillSpace', 'http://themillspace.com/'),
+    ('Kurbi', 'http://gokurbi.com/')
 )
 
 # Social widget
@@ -32,6 +35,22 @@ SOCIAL = (
 )
 
 DEFAULT_PAGINATION = 10
+
+MENUITEMS = (
+    ('Home', '/'),
+    ('MeetUps', '/meetups.html'),
+    ('About', '/about.html'),
+)
+
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
+
+TWITTER_USER = 'ThomasMarks'
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
