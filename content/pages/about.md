@@ -4,7 +4,7 @@ Modified: 2016-10-29
 Status: published
 save_as: about.html
 
-At the moment _Wilmington Web Devs_ is just Tom Marks and Matt Eckman who both work out of [TheMillSpace](http://themillspace.com) in central Wilmington.
+At the moment _Wilmington Web Devs_ is just Tom and Matt who both work out of [TheMillSpace](http://themillspace.com) in central Wilmington.
 
 # Tom Marks
 <img style="float: right; height: 100px;" src="/images/automate-all-the-things.jpg">
