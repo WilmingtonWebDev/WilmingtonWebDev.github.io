@@ -21,7 +21,7 @@ install:
 - pip install -r requirements.txt -c requirements.lock
 script:
 # Need to pull latest master for push to work
-- git fetch origin master:master
+- git fetch -f origin master:master
 - make publish # Generates new site
 - make github # Publish site to github
 after_script:
