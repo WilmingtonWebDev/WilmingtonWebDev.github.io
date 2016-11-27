@@ -12,7 +12,9 @@ TIMEZONE = 'EST'
 
 DEFAULT_LANG = u'en'
 
-THEME = 'themes/html5-dopetrope'
+MEETUP_CATEGORY = 'meetups'
+
+THEME = 'themes/WWDevs'
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

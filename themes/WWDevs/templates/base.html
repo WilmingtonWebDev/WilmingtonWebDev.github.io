@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        {% block head %}
+            <title>{% block title %}{{ SITE_TITLE }}{% endblock title %}</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="/theme/css/bootstrap.css">
+            <link rel="stylesheet" href="/theme/css/bootsketch.css">
+            <link rel="stylesheet" href="/theme/css/foo.css">
+        {% endblock head %}
+    </head>
+    <body>
+    {% include 'header.html' with context %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+            {% block content %}
+            {% endblock content %}
+            </div>
+            <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <img src="/images/web-logo.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' with context %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <script src="/theme/js/vendors.min.js"></script>
+    </body>
+</html>
