@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+            <title>WWDev</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="/theme/css/bootstrap.css">
+            <link rel="stylesheet" href="/theme/css/bootsketch.css">
+            <link rel="stylesheet" href="/theme/css/foo.css">
+    </head>
+    <body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Wilmington Web Devs</h1>
+		</div>
+	</div>
+</div>    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+    <h1>WWDev</h1>
+    
+
+    <!-- save_as: index.html -->
+
+<p>Welcome to <em>Wilmington Web Devs!</em></p>
+<h3>We're just getting started</h3>
+<p>There's not much here yet, but if you work web development and would be interested in comming to a meetup to share ideas, talk about best practices or or just talk to others who work in the sector this might be a meetup for you.</p>
+<h3>The first meetup</h3>
+<p>Matts busy updating his meetup account and creating a group so that everyone can send in their lovely RSVPs.</p>
+<p>We'll be trying out a lunchtime MeetUp at <a href="http://themillspace.com/">The Mill Space</a> sometime towards the end of November.</p>
+<p>It will provisionally be a meet &amp; greet with a short Javascript talk on Promises in which we mostly likely try to cover:</p>
+<ul>
+<li>What are they?</li>
+<li>How they help you avoid callback hell and write better code.</li>
+<li>Native ES2015 Promises vs Bluebird</li>
+</ul>
+<h3>Get in touch</h3>
+<p>Whilst we're getting our ducks in a row you can contact us <a href="https://twitter.com/ThomasMarks">@ThomasMarks</a></p>
+<hr />
+<p><strong>// Callback Hell</strong></p>
+<div class="highlight"><pre><span></span>getData(function(x){
+    getMoreData(x, function(y){
+      getMoreData(x, function(y){
+        getMoreData(x, function(y){
+            getMoreData(y, function(z){
+                ...
+            });
+        });
+      });
+    });
+});
+</pre></div>
+
+
+<p><strong>// Promisified </strong></p>
+<div class="highlight"><pre><span></span>getDataPromise
+  .then(getData)
+  .then(getData)
+  .then(getData)
+  .then(getData)
+...
+  .catch(handleError)
+</pre></div>
+
+		<p>
+		Last updated: Wed 02 November 2016
+		</p>
+            </div>
+            <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <img src="/images/web-logo.png">
+                </a>
+            </div>
+        </div>
+    </div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</footer>    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <script src="/theme/js/vendors.min.js"></script>
+    </body>
+</html>
