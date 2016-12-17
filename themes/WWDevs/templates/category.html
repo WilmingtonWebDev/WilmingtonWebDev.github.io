@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	{% for article in articles_page.object_list | sort(attribute='date', reverse=True) %}
+    {% if loop.index == 1 %}
+        {% set sign_up_text = True %}
+        {% set meetup_heading = "Next Meetup" %}
+        {% include 'meetup_panel.html' with context %}
+    {% elif loop.index == 2 %}
+        {% set sign_up_text = False %}
+        {% set meetup_heading = "Last Meetup" %}
+        {% include 'meetup_panel.html' with context %}
+    {% else %}
+		{% set meetup_heading = "Meetup" %}
+		{% include 'meetup_panel.html' with context %}
+    {% endif %}
+
+	{% endfor %}
+
+{% endblock content %}

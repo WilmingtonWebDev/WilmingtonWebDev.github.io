@@ -1,6 +1,6 @@
 <section>
     <div class="panel panel-default">
-        <div class="panel-heading">Next Meetup</div>
+        <div class="panel-heading">{{ meetup_heading }}</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-10">
@@ -19,6 +19,7 @@
             </div>
         </div>
         <div class="row">
+        {% if article.meetup_images %}
         {% set images = article.meetup_images.split(',') %}
         {% for image_url in images %}
             <div class="col-xs-4">
@@ -27,6 +28,7 @@
                 </a>
             </div>
         {% endfor %}
+        {% endif %}
         </div>
     </div>
 </section>
