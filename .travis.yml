@@ -23,6 +23,8 @@ script:
 # Need to pull latest master for push to work
 - git fetch -f origin master:master
 - rm -rf output
+- make clean
+- make regenerate
 - make publish # Generates new site
 - make github # Publish site to github
 after_script:
