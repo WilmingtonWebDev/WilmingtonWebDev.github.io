@@ -1,0 +1,32 @@
+<section>
+    <div class="panel panel-default">
+        <div class="panel-heading">Next Meetup</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-10">
+                    <h1>{{ article.meetup_title }}</h1>
+                    <h3>{{ article.meetup_date }}</h3>
+                    <h4>{{ article.meetup_start_time }} to {{ article.meetup_end_time}}</h4>
+                </div>
+                <div class="col-xs-2">
+                    <a href="{{ article.meetup_url }}" target="_blank">
+                        {% if sign_up_text %}
+                        Sign up to the
+                        {% endif %}
+                        <img src="/images/meetup.png" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        {% set images = article.meetup_images.split(',') %}
+        {% for image_url in images %}
+            <div class="col-xs-4">
+                <a href="#" class="thumbnail">
+                    <img src="{{ image_url }}">
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
