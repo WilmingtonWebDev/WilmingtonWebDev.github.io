@@ -1,4 +1,4 @@
-Title: Three JS & Web VR
+Title: Functional Programming in Javascript!
 Date: 2017-03-15
 Modified: 2017-03-09
 Status: published
